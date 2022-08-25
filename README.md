@@ -12,7 +12,7 @@ The TableView has 3 columns:
 
 The form also contains a set of `TextField`s and a `Button` to create a new record.
 `Task` is a JavaFX flavour of POJO, the only difference is it uses `Property`s instead of simple types.
-Data source for the TableView is an `ObservableList` of `Task`a.
+Data source for the TableView is an `ObservableList` of `Task`s.
 You can easily replace it with a service.
 
 Worth mentioning that `HelloController` class is used as a controller for the form.
@@ -35,3 +35,8 @@ public void start(Stage stage) throws IOException {
 `HelloController::initialize()` method sets up the TableView after loading it from FXML.
 It assigns CellValueFactories to all columns, and for two of them (title and isDone) assigns CellFactories (`TextFieldTableCell` and `CheckBoxTableCell` correspondently).
 It also sets event handler for title's `onEditCommit` event, where updates a correspondent Task's value in the `ObservableList`.
+
+The following sources have been used to create this demo:
+* [TableView section of Jenkov's JavaFX tutorial](https://jenkov.com/tutorials/javafx/tableview.html)
+* [JavaFX javadoc for TableView](https://openjfx.io/javadoc/18/javafx.controls/javafx/scene/control/TableView.html)
+
